@@ -3,7 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Project/AMOVIA/app/src/main/res/drawable/ic_favorite_outline_grey_24.xml" value="0.1" />
+        <entry key="..\:/Android Project/AMOVIA/app/src/main/res/drawable/ic_favorite_outline_white_24.xml" value="0.1" />
+        <entry key="..\:/Android Project/AMOVIA/app/src/main/res/drawable/ic_home_24.xml" value="0.1" />
+        <entry key="..\:/Android Project/AMOVIA/app/src/main/res/drawable/ic_home_outline_24.xml" value="0.1" />
+        <entry key="..\:/Android Project/AMOVIA/app/src/main/res/drawable/selector_bottom_nav_items_color.xml" value="0.1" />
+        <entry key="..\:/Android Project/AMOVIA/app/src/main/res/drawable/selector_favorite.xml" value="0.1" />
+        <entry key="..\:/Android Project/AMOVIA/app/src/main/res/drawable/selector_home.xml" value="0.1" />
         <entry key="..\:/Android Project/AMOVIA/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Android Project/AMOVIA/app/src/main/res/layout/fragment_favorite.xml" value="0.1" />
+        <entry key="..\:/Android Project/AMOVIA/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
       </map>
     </option>
   </component>
