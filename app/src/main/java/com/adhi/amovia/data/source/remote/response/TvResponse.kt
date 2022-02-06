@@ -18,3 +18,8 @@ data class TvResponse(
     @field:SerializedName("vote_average")
     val rating: Double
 )
+
+data class ListTv(
+    @field:SerializedName("results")
+    val results: List<TvResponse>
+)
