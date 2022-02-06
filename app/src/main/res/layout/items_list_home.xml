@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="125dp"
-    android:layout_height="285dp"
+    android:layout_height="265dp"
     android:layout_marginEnd="8dp">
 
     <androidx.cardview.widget.CardView
@@ -40,19 +40,6 @@
         tools:text="@string/title_film" />
 
     <TextView
-        android:id="@+id/tv_genre"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:maxLines="1"
-        android:textColor="@color/grey_400"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/tv_title"
-        app:layout_constraintStart_toStartOf="@+id/tv_title"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title"
-        tools:text="@string/genre" />
-
-    <TextView
         android:id="@+id/tv_rating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -63,8 +50,8 @@
         android:textStyle="bold"
         app:drawableStartCompat="@drawable/ic_star_14"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/tv_genre"
-        app:layout_constraintTop_toBottomOf="@+id/tv_genre"
+        app:layout_constraintStart_toStartOf="@+id/tv_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
         tools:text="@string/number" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
