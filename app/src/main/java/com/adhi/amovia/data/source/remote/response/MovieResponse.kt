@@ -18,3 +18,8 @@ data class MovieResponse(
     @field:SerializedName("vote_average")
     val rating: Double
 )
+
+data class ListMovie(
+    @field:SerializedName("results")
+    val results: List<MovieResponse>
+)
