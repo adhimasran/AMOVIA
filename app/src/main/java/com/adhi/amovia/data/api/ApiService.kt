@@ -10,6 +10,6 @@ interface ApiService {
     @GET("{media_type}/{category}?api_key=$API_KEY")
     fun getFilm(
         @Path("media_type") mediaType: String,
-        @Path("category") category: Int
+        @Path("category") category: String
     ): Call<ListFilm>
 }
