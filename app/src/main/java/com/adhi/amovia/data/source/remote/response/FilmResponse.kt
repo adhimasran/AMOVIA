@@ -2,7 +2,7 @@ package com.adhi.amovia.data.source.remote.response
 
 import com.google.gson.annotations.SerializedName
 
-data class MovieResponse(
+data class FilmResponse(
     @field:SerializedName("id")
     val id: Int,
 
@@ -12,14 +12,19 @@ data class MovieResponse(
     @field:SerializedName("backdrop_path")
     val backdropPath: String,
 
-    @field:SerializedName("title")
-    val title: String,
-
     @field:SerializedName("vote_average")
-    val rating: Double
+    val rating: Double,
+
+    // Movie
+    @field:SerializedName("title")
+    val title: String? = null,
+
+    // TV
+    @field:SerializedName("name")
+    val name: String? = null
 )
 
-data class ListMovie(
+data class ListFilm(
     @field:SerializedName("results")
-    val results: List<MovieResponse>
+    val results: List<FilmResponse>
 )
