@@ -35,11 +35,20 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         setupAdapter()
+        setData()
     }
 
     private fun setupAdapter() {
         binding?.apply {
             rvUpcomingMovie.adapter = upcomingMovieAdapter
+        }
+    }
+
+    private fun setData() {
+        homeViewModel.apply {
+            getUpcomingMovie().observe(viewLifecycleOwner, {
+                upcomingMovieAdapter.setMovie(it)
+            })
         }
     }
 
