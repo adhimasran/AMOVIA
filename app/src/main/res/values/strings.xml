@@ -5,4 +5,9 @@
     <string name="title_film">The Legend of Me</string>
     <string name="poster">Poster Image</string>
     <string name="number">9</string>
+    <!-- Home category title -->
+    <string name="popular_movie">Popular Movie</string>
+    <string name="upcoming_movie">Upcoming Movie</string>
+    <string name="popular_tv">Popular TV</string>
+    <string name="on_air_tv">Airing on TV</string>
 </resources>
