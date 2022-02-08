@@ -10,4 +10,8 @@
     <string name="upcoming_movie">Upcoming Movie</string>
     <string name="popular_tv">Popular TV</string>
     <string name="on_air_tv">Airing on TV</string>
+    <!-- Other -->
+    <string name="see_all">See All</string>
+    <string name="see">See</string>
+    <string name="undo">Undo</string>
 </resources>
