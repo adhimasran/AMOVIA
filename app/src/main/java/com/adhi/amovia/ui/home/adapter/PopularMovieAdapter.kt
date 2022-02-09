@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.adhi.amovia.data.source.remote.response.FilmResponse
-import com.adhi.amovia.databinding.ItemsListHomeBinding
+import com.adhi.amovia.databinding.ItemsListHomeLargeBinding
 import com.adhi.amovia.utils.Utility.loadImage
 
 class PopularMovieAdapter : RecyclerView.Adapter<PopularMovieAdapter.MovieViewHolder>() {
@@ -16,14 +16,13 @@ class PopularMovieAdapter : RecyclerView.Adapter<PopularMovieAdapter.MovieViewHo
         notifyDataSetChanged()
     }
 
-    inner class MovieViewHolder(private val binding: ItemsListHomeBinding) :
+    inner class MovieViewHolder(private val binding: ItemsListHomeLargeBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(popularMovie: FilmResponse) {
             binding.apply {
                 popularMovie.apply {
                     tvTitle.text = title
-                    tvRating.text = rating.toString()
-                    imgPoster.loadImage(posterPath)
+                    imgPoster.loadImage(backdropPath)
                 }
             }
         }
@@ -31,7 +30,7 @@ class PopularMovieAdapter : RecyclerView.Adapter<PopularMovieAdapter.MovieViewHo
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
         val binding =
-            ItemsListHomeBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            ItemsListHomeLargeBinding.inflate(LayoutInflater.from(parent.context), parent, false)
 
         return MovieViewHolder(binding)
     }
