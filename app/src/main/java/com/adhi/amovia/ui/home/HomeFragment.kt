@@ -52,6 +52,10 @@ class HomeFragment : Fragment() {
             getUpcomingMovie().observe(viewLifecycleOwner, {
                 upcomingMovieAdapter.setMovie(it)
             })
+
+            getOnAirTv().observe(viewLifecycleOwner, {
+                onAirTvAdapter.setData(it)
+            })
         }
     }
 
