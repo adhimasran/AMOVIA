@@ -52,6 +52,10 @@ class HomeFragment : Fragment() {
 
     private fun setData() {
         homeViewModel.apply {
+            getPopularMovie().observe(viewLifecycleOwner, {
+                popularMovieAdapter.setMovie(it)
+            })
+
             getUpcomingMovie().observe(viewLifecycleOwner, {
                 upcomingMovieAdapter.setMovie(it)
             })
