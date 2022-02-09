@@ -13,6 +13,23 @@ import retrofit2.Response
 class HomeViewModel : ViewModel() {
     private val apiConfig = ApiConfig.getApiService()
 
+    fun getPopularMovie(): LiveData<List<FilmResponse>> {
+        val listMovie = MutableLiveData<List<FilmResponse>>()
+        val  client = apiConfig.getFilm("movie", "popular")
+
+        client.enqueue(object : Callback<ListFilm> {
+            override fun onResponse(call: Call<ListFilm>, response: Response<ListFilm>) {
+                listMovie.value = response.body()?.results
+            }
+
+            override fun onFailure(call: Call<ListFilm>, t: Throwable) {
+                TODO("Not yet implemented")
+            }
+        })
+
+        return listMovie
+    }
+
     fun getUpcomingMovie(): LiveData<List<FilmResponse>> {
         val listMovie = MutableLiveData<List<FilmResponse>>()
         val client = apiConfig.getFilm("movie", "upcoming")
