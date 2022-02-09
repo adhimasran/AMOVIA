@@ -25,9 +25,25 @@ class HomeViewModel : ViewModel() {
             override fun onFailure(call: Call<ListFilm>, t: Throwable) {
                 TODO("Not yet implemented")
             }
-
         })
 
         return listMovie
+    }
+
+    fun getOnAirTv(): LiveData<List<FilmResponse>> {
+        val listTv = MutableLiveData<List<FilmResponse>>()
+        val client = apiConfig.getFilm("tv", "on_the_air")
+
+        client.enqueue(object : Callback<ListFilm> {
+            override fun onResponse(call: Call<ListFilm>, response: Response<ListFilm>) {
+                listTv.value = response.body()?.results
+            }
+
+            override fun onFailure(call: Call<ListFilm>, t: Throwable) {
+                TODO("Not yet implemented")
+            }
+        })
+
+        return listTv
     }
 }
