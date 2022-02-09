@@ -15,21 +15,23 @@ class UpcomingMovieAdapter : RecyclerView.Adapter<UpcomingMovieAdapter.MovieView
         listMovie.addAll(movie)
         notifyDataSetChanged()
     }
+
     inner class MovieViewHolder(private val binding: ItemsListHomeBinding) :
-            RecyclerView.ViewHolder(binding.root) {
-                fun bind(movie: FilmResponse) {
-                    binding.apply {
-                        movie.apply {
-                            tvTitle.text = title
-                            tvRating.text = rating.toString()
-                            imgPoster.loadImage(posterPath)
-                        }
-                    }
+        RecyclerView.ViewHolder(binding.root) {
+        fun bind(movie: FilmResponse) {
+            binding.apply {
+                movie.apply {
+                    tvTitle.text = title
+                    tvRating.text = rating.toString()
+                    imgPoster.loadImage(posterPath)
                 }
             }
+        }
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
-        val binding = ItemsListHomeBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding =
+            ItemsListHomeBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return MovieViewHolder(binding)
     }
 
