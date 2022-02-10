@@ -12,6 +12,7 @@ import com.adhi.amovia.R
 import com.adhi.amovia.databinding.FragmentHomeBinding
 import com.adhi.amovia.ui.home.adapter.OnAirTvAdapter
 import com.adhi.amovia.ui.home.adapter.PopularMovieAdapter
+import com.adhi.amovia.ui.home.adapter.PopularTvAdapter
 import com.adhi.amovia.ui.home.adapter.UpcomingMovieAdapter
 
 class HomeFragment : Fragment() {
@@ -19,9 +20,10 @@ class HomeFragment : Fragment() {
     private lateinit var homeViewModel: HomeViewModel
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding
-    private val upcomingMovieAdapter = UpcomingMovieAdapter()
-    private val onAirTvAdapter = OnAirTvAdapter()
     private val popularMovieAdapter = PopularMovieAdapter()
+    private val upcomingMovieAdapter = UpcomingMovieAdapter()
+    private val popularTvAdapter = PopularTvAdapter()
+    private val onAirTvAdapter = OnAirTvAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -44,9 +46,10 @@ class HomeFragment : Fragment() {
 
     private fun setupAdapter() {
         binding?.apply {
-            rvUpcomingMovie.adapter = upcomingMovieAdapter
-            rvOnAirTv.adapter = onAirTvAdapter
             rvPopularMovie.adapter = popularMovieAdapter
+            rvUpcomingMovie.adapter = upcomingMovieAdapter
+            rvPopularTv.adapter = popularTvAdapter
+            rvOnAirTv.adapter = onAirTvAdapter
         }
     }
 
