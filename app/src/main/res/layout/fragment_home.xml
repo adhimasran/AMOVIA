@@ -23,13 +23,9 @@
 
         <TextView
             android:id="@+id/see_all_popular_movie"
+            style="@style/SeeAllStyle"
             android:layout_width="wrap_content"
             android:layout_height="22dp"
-            android:layout_marginEnd="16dp"
-            android:text="@string/see_all"
-            android:textColor="@color/gold"
-            android:textSize="14sp"
-            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/tv_popular_movie"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/tv_popular_movie" />
@@ -72,13 +68,9 @@
 
         <TextView
             android:id="@+id/see_all_upcoming_movie"
+            style="@style/SeeAllStyle"
             android:layout_width="wrap_content"
             android:layout_height="22dp"
-            android:layout_marginEnd="16dp"
-            android:text="@string/see_all"
-            android:textColor="@color/gold"
-            android:textSize="14sp"
-            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/tv_upcoming_movie"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/tv_upcoming_movie" />
@@ -121,13 +113,9 @@
 
         <TextView
             android:id="@+id/see_all_on_air_tv"
+            style="@style/SeeAllStyle"
             android:layout_width="wrap_content"
             android:layout_height="22dp"
-            android:layout_marginEnd="16dp"
-            android:text="@string/see_all"
-            android:textColor="@color/gold"
-            android:textSize="14sp"
-            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/tv_on_air_tv"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/tv_on_air_tv" />
