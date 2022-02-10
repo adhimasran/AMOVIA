@@ -22,7 +22,7 @@ class PopularMovieAdapter : RecyclerView.Adapter<PopularMovieAdapter.MovieViewHo
             binding.apply {
                 popularMovie.apply {
                     tvTitle.text = title
-                    imgPoster.loadImage(backdropPath)
+                    imgPoster.loadImage(backdropPath ?: posterPath)
                 }
             }
         }

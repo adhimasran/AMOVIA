@@ -10,7 +10,7 @@ data class FilmResponse(
     val posterPath: String,
 
     @field:SerializedName("backdrop_path")
-    val backdropPath: String,
+    val backdropPath: String? = null,
 
     @field:SerializedName("vote_average")
     val rating: Double,

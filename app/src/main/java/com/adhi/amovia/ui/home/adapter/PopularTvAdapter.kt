@@ -22,7 +22,7 @@ class PopularTvAdapter : RecyclerView.Adapter<PopularTvAdapter.TvViewHolder>() {
                     binding.apply {
                         popularTv.apply {
                             tvTitle.text = name
-                            imgPoster.loadImage(backdropPath)
+                            imgPoster.loadImage(backdropPath ?: posterPath)
                         }
                     }
                 }
