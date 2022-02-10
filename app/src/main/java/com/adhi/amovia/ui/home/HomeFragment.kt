@@ -63,6 +63,10 @@ class HomeFragment : Fragment() {
                 upcomingMovieAdapter.setMovie(it)
             })
 
+            getPopularTv().observe(viewLifecycleOwner, {
+                popularTvAdapter.setTv(it)
+            })
+
             getOnAirTv().observe(viewLifecycleOwner, {
                 onAirTvAdapter.setData(it)
             })
