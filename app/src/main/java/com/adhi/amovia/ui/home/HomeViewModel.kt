@@ -47,6 +47,23 @@ class HomeViewModel : ViewModel() {
         return listMovie
     }
 
+    fun getPopularTv(): LiveData<List<FilmResponse>> {
+        val listTv = MutableLiveData<List<FilmResponse>>()
+        val client = apiConfig.getFilm("tv", "popular")
+
+        client.enqueue(object : Callback<ListFilm> {
+            override fun onResponse(call: Call<ListFilm>, response: Response<ListFilm>) {
+                listTv.value = response.body()?.results
+            }
+
+            override fun onFailure(call: Call<ListFilm>, t: Throwable) {
+                TODO("Not yet implemented")
+            }
+        })
+
+        return listTv
+    }
+
     fun getOnAirTv(): LiveData<List<FilmResponse>> {
         val listTv = MutableLiveData<List<FilmResponse>>()
         val client = apiConfig.getFilm("tv", "on_the_air")
