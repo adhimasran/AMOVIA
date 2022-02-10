@@ -27,4 +27,12 @@
         <item name="android:layout_marginStart">16dp</item>
         <item name="android:layout_marginEnd">16dp</item>
     </style>
+
+    <style name="SeeAllStyle">
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:text">@string/see_all</item>
+        <item name="android:textColor">@color/gold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
 </resources>
