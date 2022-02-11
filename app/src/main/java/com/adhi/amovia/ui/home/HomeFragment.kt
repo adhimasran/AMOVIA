@@ -77,10 +77,17 @@ class HomeFragment : Fragment() {
 
     private fun seeAllCategoryItems() {
         binding?.apply {
+            val intent = Intent(context, CategoryItemsActivity::class.java)
+
             seeAllPopularMovie.setOnClickListener {
-                val intent = Intent(context, CategoryItemsActivity::class.java)
                 intent.putExtra(EXTRA_MEDIA, "movie")
                 intent.putExtra(EXTRA_CATEGORY, "popular")
+                startActivity(intent)
+            }
+
+            seeAllUpcomingMovie.setOnClickListener {
+                intent.putExtra(EXTRA_MEDIA, "movie")
+                intent.putExtra(EXTRA_CATEGORY, "upcoming")
                 startActivity(intent)
             }
         }
