@@ -17,7 +17,7 @@ class CategoryItemsActivity : AppCompatActivity() {
     }
 
     companion object {
-        const val EXTRA_MEDIA = "extra_category"
+        const val EXTRA_MEDIA = "extra_media"
         const val EXTRA_CATEGORY = "extra_category"
     }
 }
