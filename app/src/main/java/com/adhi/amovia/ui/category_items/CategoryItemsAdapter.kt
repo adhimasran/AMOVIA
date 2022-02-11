@@ -22,6 +22,7 @@ class CategoryItemsAdapter : RecyclerView.Adapter<CategoryItemsAdapter.FilmViewH
             binding.apply {
                 film.apply {
                     tvTitle.text = title ?: name
+                    tvRating.text = rating.toString()
                     imgPoster.loadImage(posterPath)
                 }
             }
