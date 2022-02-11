@@ -15,7 +15,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="12dp"
-            android:layout_marginVertical="10dp"
+            android:paddingVertical="10dp"
+            android:clipToPadding="false"
             tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             tools:listitem="@layout/items_grid"
             tools:spanCount="2" />
