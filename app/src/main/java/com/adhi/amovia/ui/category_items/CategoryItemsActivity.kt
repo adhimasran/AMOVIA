@@ -16,6 +16,7 @@ class CategoryItemsActivity : AppCompatActivity() {
         binding = ActivityCategoryItemsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val title = intent.getStringExtra(EXTRA_TITLE)
         val mediaType = intent.getStringExtra(EXTRA_MEDIA)
         val category = intent.getStringExtra(EXTRA_CATEGORY)
 
@@ -36,6 +37,7 @@ class CategoryItemsActivity : AppCompatActivity() {
     }
 
     companion object {
+        const val EXTRA_TITLE = "extra_title"
         const val EXTRA_MEDIA = "extra_media"
         const val EXTRA_CATEGORY = "extra_category"
     }
