@@ -11,10 +11,13 @@ class CategoryItemsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityCategoryItemsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val mediaType = intent.getStringExtra(EXTRA_MEDIA)
+        val category = intent.getStringExtra(EXTRA_CATEGORY)
     }
 
     companion object {
         const val EXTRA_MEDIA = "extra_category"
-        const val EXTRA_CATEGORY= "extra_category"
+        const val EXTRA_CATEGORY = "extra_category"
     }
 }
