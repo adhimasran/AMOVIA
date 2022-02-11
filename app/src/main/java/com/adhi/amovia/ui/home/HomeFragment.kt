@@ -1,5 +1,6 @@
 package com.adhi.amovia.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,8 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.adhi.amovia.R
 import com.adhi.amovia.databinding.FragmentHomeBinding
+import com.adhi.amovia.ui.category_items.CategoryItemsActivity
+import com.adhi.amovia.ui.category_items.CategoryItemsActivity.Companion.EXTRA_FILM
 import com.adhi.amovia.ui.home.adapter.OnAirTvAdapter
 import com.adhi.amovia.ui.home.adapter.PopularMovieAdapter
 import com.adhi.amovia.ui.home.adapter.PopularTvAdapter
@@ -73,8 +76,24 @@ class HomeFragment : Fragment() {
         }
     }
 
+    private fun setAllCategoryItems() {
+        binding?.apply {
+            seeAllPopularMovie.setOnClickListener {
+                val intent = Intent(context, CategoryItemsActivity::class.java)
+                intent.putExtra(EXTRA_FILM, MOVIE)
+                intent.putExtra(EXTRA_FILM, "popular")
+                startActivity(intent)
+            }
+        }
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    companion object {
+        const val MOVIE = "movie"
+        const val TV = "tv"
     }
 }
