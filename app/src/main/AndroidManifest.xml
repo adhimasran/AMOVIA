@@ -3,12 +3,16 @@
     package="com.adhi.amovia">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AMOVIA">
+        <activity
+            android:name=".ui.category_items.CategoryItemsActivity"
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
