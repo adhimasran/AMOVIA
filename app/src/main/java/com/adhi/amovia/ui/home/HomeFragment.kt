@@ -5,14 +5,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.adhi.amovia.R
 import com.adhi.amovia.databinding.FragmentHomeBinding
 import com.adhi.amovia.ui.category_items.CategoryItemsActivity
-import com.adhi.amovia.ui.category_items.CategoryItemsActivity.Companion.EXTRA_FILM
+import com.adhi.amovia.ui.category_items.CategoryItemsActivity.Companion.EXTRA_CATEGORY
+import com.adhi.amovia.ui.category_items.CategoryItemsActivity.Companion.EXTRA_MEDIA
 import com.adhi.amovia.ui.home.adapter.OnAirTvAdapter
 import com.adhi.amovia.ui.home.adapter.PopularMovieAdapter
 import com.adhi.amovia.ui.home.adapter.PopularTvAdapter
@@ -45,6 +43,7 @@ class HomeFragment : Fragment() {
 
         setupAdapter()
         setData()
+        seeAllCategoryItems()
     }
 
     private fun setupAdapter() {
@@ -76,12 +75,12 @@ class HomeFragment : Fragment() {
         }
     }
 
-    private fun setAllCategoryItems() {
+    private fun seeAllCategoryItems() {
         binding?.apply {
             seeAllPopularMovie.setOnClickListener {
                 val intent = Intent(context, CategoryItemsActivity::class.java)
-                intent.putExtra(EXTRA_FILM, MOVIE)
-                intent.putExtra(EXTRA_FILM, "popular")
+                intent.putExtra(EXTRA_MEDIA, "movie")
+                intent.putExtra(EXTRA_CATEGORY, "popular")
                 startActivity(intent)
             }
         }
@@ -90,10 +89,5 @@ class HomeFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-    }
-
-    companion object {
-        const val MOVIE = "movie"
-        const val TV = "tv"
     }
 }
