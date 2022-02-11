@@ -96,6 +96,12 @@ class HomeFragment : Fragment() {
                 intent.putExtra(EXTRA_CATEGORY, "popular")
                 startActivity(intent)
             }
+
+            seeAllOnAirTv.setOnClickListener {
+                intent.putExtra(EXTRA_MEDIA, "tv")
+                intent.putExtra(EXTRA_CATEGORY, "on_the_air")
+                startActivity(intent)
+            }
         }
     }
 
