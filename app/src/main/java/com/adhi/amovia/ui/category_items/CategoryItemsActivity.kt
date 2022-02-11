@@ -1,6 +1,7 @@
 package com.adhi.amovia.ui.category_items
 
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import com.adhi.amovia.databinding.ActivityCategoryItemsBinding
@@ -8,6 +9,7 @@ import com.adhi.amovia.databinding.ActivityCategoryItemsBinding
 class CategoryItemsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCategoryItemsBinding
     private val categoryItemsAdapter = CategoryItemsAdapter()
+    private val viewModel by viewModels<CategoryItemsViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,6 +18,12 @@ class CategoryItemsActivity : AppCompatActivity() {
 
         val mediaType = intent.getStringExtra(EXTRA_MEDIA)
         val category = intent.getStringExtra(EXTRA_CATEGORY)
+
+        if (mediaType != null && category != null) {
+            viewModel.getCategoryItems(mediaType, category).observe(this, {
+                categoryItemsAdapter.setFilm(it)
+            })
+        }
 
         setupRecyclerView()
     }
