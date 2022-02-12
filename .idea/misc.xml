@@ -3,13 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Project/AMOVIA/app/src/main/res/drawable-v24/ic_back_24.xml" value="0.1" />
         <entry key="..\:/Android Project/AMOVIA/app/src/main/res/drawable/background_items_large_title.xml" value="0.109375" />
+        <entry key="..\:/Android Project/AMOVIA/app/src/main/res/drawable/ic_back_24.xml" value="0.1" />
+        <entry key="..\:/Android Project/AMOVIA/app/src/main/res/drawable/ic_back_pressed.xml" value="0.1" />
         <entry key="..\:/Android Project/AMOVIA/app/src/main/res/drawable/ic_favorite_outline_grey_24.xml" value="0.1" />
         <entry key="..\:/Android Project/AMOVIA/app/src/main/res/drawable/ic_favorite_outline_white_24.xml" value="0.1" />
         <entry key="..\:/Android Project/AMOVIA/app/src/main/res/drawable/ic_home_24.xml" value="0.1" />
         <entry key="..\:/Android Project/AMOVIA/app/src/main/res/drawable/ic_home_outline_24.xml" value="0.1" />
         <entry key="..\:/Android Project/AMOVIA/app/src/main/res/drawable/ic_star_14.xml" value="0.1" />
         <entry key="..\:/Android Project/AMOVIA/app/src/main/res/drawable/selector_bottom_nav_items_color.xml" value="0.1" />
+        <entry key="..\:/Android Project/AMOVIA/app/src/main/res/drawable/selector_btn_back.xml" value="0.1" />
         <entry key="..\:/Android Project/AMOVIA/app/src/main/res/drawable/selector_favorite.xml" value="0.1" />
         <entry key="..\:/Android Project/AMOVIA/app/src/main/res/drawable/selector_home.xml" value="0.1" />
         <entry key="..\:/Android Project/AMOVIA/app/src/main/res/layout/activity_category_items.xml" value="0.22" />
