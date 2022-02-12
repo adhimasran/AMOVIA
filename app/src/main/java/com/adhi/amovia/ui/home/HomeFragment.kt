@@ -11,6 +11,7 @@ import com.adhi.amovia.databinding.FragmentHomeBinding
 import com.adhi.amovia.ui.category_items.CategoryItemsActivity
 import com.adhi.amovia.ui.category_items.CategoryItemsActivity.Companion.EXTRA_CATEGORY
 import com.adhi.amovia.ui.category_items.CategoryItemsActivity.Companion.EXTRA_MEDIA
+import com.adhi.amovia.ui.category_items.CategoryItemsActivity.Companion.EXTRA_TITLE
 import com.adhi.amovia.ui.home.adapter.OnAirTvAdapter
 import com.adhi.amovia.ui.home.adapter.PopularMovieAdapter
 import com.adhi.amovia.ui.home.adapter.PopularTvAdapter
@@ -80,24 +81,28 @@ class HomeFragment : Fragment() {
             val intent = Intent(context, CategoryItemsActivity::class.java)
 
             seeAllPopularMovie.setOnClickListener {
+                intent.putExtra(EXTRA_TITLE, "Popular Movie")
                 intent.putExtra(EXTRA_MEDIA, "movie")
                 intent.putExtra(EXTRA_CATEGORY, "popular")
                 startActivity(intent)
             }
 
             seeAllUpcomingMovie.setOnClickListener {
+                intent.putExtra(EXTRA_TITLE, "Upcoming Movie")
                 intent.putExtra(EXTRA_MEDIA, "movie")
                 intent.putExtra(EXTRA_CATEGORY, "upcoming")
                 startActivity(intent)
             }
 
             seeAllPopularTv.setOnClickListener {
+                intent.putExtra(EXTRA_TITLE, "Popular TV")
                 intent.putExtra(EXTRA_MEDIA, "tv")
                 intent.putExtra(EXTRA_CATEGORY, "popular")
                 startActivity(intent)
             }
 
             seeAllOnAirTv.setOnClickListener {
+                intent.putExtra(EXTRA_TITLE, "Airing on TV")
                 intent.putExtra(EXTRA_MEDIA, "tv")
                 intent.putExtra(EXTRA_CATEGORY, "on_the_air")
                 startActivity(intent)
