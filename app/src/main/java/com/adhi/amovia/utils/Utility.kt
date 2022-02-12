@@ -1,9 +1,14 @@
 package com.adhi.amovia.utils
 
-import android.os.Build
+import android.content.Context
+import android.content.res.ColorStateList
+import android.view.View
 import android.widget.ImageView
-import androidx.annotation.RequiresApi
+import androidx.core.content.ContextCompat.getColor
+import com.adhi.amovia.R
 import com.bumptech.glide.Glide
+import com.google.android.material.chip.Chip
+import com.google.android.material.chip.ChipGroup
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
@@ -22,5 +27,18 @@ object Utility {
         val format = DateTimeFormatter.ofPattern("MMMM dd, yyyy")
         val date = LocalDate.parse(this)
         return date.format(format)
+    }
+
+    fun ChipGroup.addChip(context: Context, label: String) {
+        Chip(context).apply {
+            id = View.generateViewId()
+            text = label
+            isCheckable = false
+            isClickable = false
+            isFocusable = false
+            chipBackgroundColor =
+                ColorStateList.valueOf(getColor(context, R.color.gold))
+            addView(this)
+        }
     }
 }
