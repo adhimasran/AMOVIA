@@ -22,6 +22,11 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="Theme.AMOVIA.AppBarOverlay">
+        <item name="windowActionBarOverlay">true</item>
+        <item name="homeAsUpIndicator">@drawable/selector_btn_back</item>
+    </style>
+
     <style name="HomeHeadStyle">
         <item name="android:textSize">18sp</item>
         <item name="android:textStyle">bold</item>

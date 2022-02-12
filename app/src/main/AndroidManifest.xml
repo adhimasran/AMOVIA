@@ -12,7 +12,8 @@
         android:theme="@style/Theme.AMOVIA">
         <activity
             android:name=".ui.detail.DetailActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.AMOVIA.AppBarOverlay" />
         <activity
             android:name=".ui.category_items.CategoryItemsActivity"
             android:exported="true" />
