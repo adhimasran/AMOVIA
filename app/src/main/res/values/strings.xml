@@ -11,6 +11,14 @@
     <string name="upcoming_movie">Upcoming Movie</string>
     <string name="popular_tv">Popular TV</string>
     <string name="on_air_tv">Airing on TV</string>
+    <!-- Detail -->
+    <string name="title">%s (%s)</string>
+    <string name="rating">%s/10</string>
+    <string name="rating_count">(%s)</string>
+    <string name="release">Dec 12, 2021</string>
+    <string name="duration">1h 20m</string>
+    <string name="overview">Overview</string>
+    <string name="genre">Genre</string>
     <!-- Other -->
     <string name="see_all">See All</string>
     <string name="see">See</string>
