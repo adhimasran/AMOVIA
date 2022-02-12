@@ -9,4 +9,8 @@ object Utility {
             .load("${Constants.BASE_URL_IMG}${path}")
             .into(this)
     }
+
+    fun Int.convertToTime(): String {
+        return "${if (this / 60 > 0) "${this / 60}h " else ""}${this % 60}m"
+    }
 }
