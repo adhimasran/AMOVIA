@@ -20,6 +20,10 @@ class CategoryItemsActivity : AppCompatActivity() {
         val mediaType = intent.getStringExtra(EXTRA_MEDIA)
         val category = intent.getStringExtra(EXTRA_CATEGORY)
 
+        val actionBar = supportActionBar
+        actionBar?.setDisplayHomeAsUpEnabled(true)
+        actionBar?.title = title
+
         if (mediaType != null && category != null) {
             viewModel.getCategoryItems(mediaType, category).observe(this, {
                 categoryItemsAdapter.setFilm(it)
@@ -27,6 +31,11 @@ class CategoryItemsActivity : AppCompatActivity() {
         }
 
         setupRecyclerView()
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 
     private fun setupRecyclerView() {
