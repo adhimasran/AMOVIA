@@ -3,6 +3,7 @@
     <string name="title_home">Home</string>
     <string name="title_favorite">Favorite</string>
     <string name="title_film">The Legend of Me</string>
+    <string name="backdrop">Backdrop Image</string>
     <string name="poster">Poster Image</string>
     <string name="number">9</string>
     <!-- Home category title -->
