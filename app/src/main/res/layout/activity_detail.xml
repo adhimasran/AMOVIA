@@ -164,30 +164,6 @@
                 app:layout_constraintTop_toBottomOf="@id/tv_head_overview"
                 tools:text="@string/overview" />
 
-            <TextView
-                android:id="@+id/tv_head_genre"
-                style="@style/DetailHeadStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/genre"
-                app:layout_constraintStart_toStartOf="@+id/tv_overview"
-                app:layout_constraintTop_toBottomOf="@id/tv_overview" />
-
-            <com.google.android.material.chip.ChipGroup
-                android:id="@+id/chip_genre"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="16dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/tv_head_genre"
-                app:layout_constraintTop_toBottomOf="@id/tv_head_genre"
-                app:selectionRequired="false"
-                app:singleSelection="false" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </RelativeLayout>
