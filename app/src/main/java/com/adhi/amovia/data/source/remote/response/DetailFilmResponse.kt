@@ -45,6 +45,6 @@ data class DetailFilmResponse(
     val firstAir: String? = null,
 
     @field:SerializedName("episode_run_time")
-    val episodeRuntime: List<Int>? = null
+    val episodeRuntime: List<Int>
 
 )
