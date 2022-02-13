@@ -1,6 +1,7 @@
 package com.adhi.amovia.ui.detail
 
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.adhi.amovia.R
 import com.adhi.amovia.data.source.remote.response.DetailFilmResponse
@@ -11,6 +12,7 @@ import com.adhi.amovia.utils.Utility.loadImage
 
 class DetailActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailBinding
+    private val viewModel by viewModels<DetailViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,6 +21,12 @@ class DetailActivity : AppCompatActivity() {
 
         val mediaType = intent.getStringExtra(EXTRA_MEDIA)
         val id = intent.getIntExtra(EXTRA_ID, 0)
+
+        if (mediaType != null && id != 0) {
+            viewModel.getDetailFilm(mediaType, id).observe(this, {
+                setDetail(it)
+            })
+        }
     }
 
     private fun setDetail(film: DetailFilmResponse) {
